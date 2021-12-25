@@ -15,6 +15,7 @@ jobs:
           name: Commit PDF
           path: cv/resume.pdf
   CommitPDF:
+    needs: CompilePDF
     runs-on: ubuntu-latest
     name: Commit resume.pdf to GitHub Pages
     steps:
@@ -25,4 +26,4 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: resume.pdf
-        #another compile-check
+        
