@@ -28,6 +28,8 @@ jobs:
           name: resume
       - name: Commit .pdf to GitHub Pages
         run: |
+          git config --global user.email "dns.ostashov@gmail.com"
+          git config --global user.name "Denis Ostashov"
           git add resume.pdf
           git commit --message "Push resume from CI"
           git push
