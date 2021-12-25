@@ -22,3 +22,7 @@ jobs:
         run: docker build --tag compiler .
       - name: Compile PDF
         run: docker run --mount type=bind,source=$(pwd)/cv,destination=/cv compiler
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Commit PDF
+          path: cv/resume.pdf
