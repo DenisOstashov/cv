@@ -15,9 +15,10 @@ jobs:
           name: Commit PDF
           path: cv/resume.pdf
   CommitPDF:
-    needs: CompilePDF
     runs-on: ubuntu-latest
     name: Commit resume.pdf to GitHub Pages
     steps:
-    
- 
+      - uses: actions/checkout@v2
+        with:
+          ref: github_pages_branch
+        #check_fine
