@@ -2,12 +2,10 @@ name: CI
 on: [push]
 jobs:
   CompilePDF:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     name: Compile resume.pdf from resume.tex
     steps:
       - uses: actions/checkout@v2
-      # Runs a single command using the runners shell
       - name: Create .pdf compiler
         run: docker build --tag compiler .
       - name: Compile PDF
@@ -16,3 +14,4 @@ jobs:
         with:
           name: Commit PDF
           path: cv/resume.pdf
+ 
