@@ -14,4 +14,8 @@ jobs:
         with:
           name: Commit PDF
           path: cv/resume.pdf
+  CommitPDF:
+    needs: CompilePDF
+    runs-on: ubuntu-latest
+    name: Commit resume.pdf to GitHub Pages
  
