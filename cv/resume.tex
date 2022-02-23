@@ -1,5 +1,5 @@
 
-\documentclass[paper=letter,fontsize=15pt]{scrartcl} % KOMA-article class
+\documentclass[paper=a4,fontsize=15pt]{scrartcl} % KOMA-article class
 							
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -51,8 +51,8 @@ urlcolor=blue]{hyperref}
 \newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
 
 \newcommand{\MyName}[1]{ % Name
-		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-		\par \normalsize \normalfont}
+		\huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \vspace*{-20pt} \normalfont}
 		
 \newcommand{\MySlogan}[1]{ % Slogan}{optional)
 		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
@@ -69,7 +69,7 @@ urlcolor=blue]{hyperref}
 \newcommand{\PersonalEntry}[2]{\small
 		\noindent\hangindent=2em\hangafter=0 % Indentation
 		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}		       % Entry name}{birth, address, etc.)
+		#1}		       % Entry name}{birth, address, etc.)
 		\small\hspace{1.5em} #2 \par}    % Entry value
 
 \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
@@ -152,35 +152,29 @@ urlcolor=blue]{hyperref}
 %		\includegraphics[width=0.15\textwidth]{pic.jpg}
 %\end{wrapfigure}
 
-\MyName{Denis Ostashov}
 % * <dlostashov@edu.hse.ru> 2017-04-05T09:48:04.884Z:
 % 
 % 1st commit
 % 
 % ^.
 
-\sepspace
-\sepspace
-
 %%% Personal details
 %%% ------------------------------------------------------------
-\NewPart{}{}
+\NewPart{\MyName{Denis Ostashov}}{}
 
 \PersonalEntry{Phone:}{+7(916)145-87-40}
 \PersonalEntry{Mail:}{\href{mailto:dlostashov@edu.hse.ru}{\underline{dlostashov@edu.hse.ru}}}
 \PersonalEntry{GitHub:}{\href{https://github.com/DenisOstashov}{\underline{DenisOstashov}}}
 \PersonalEntry{Telegram:}{\href{https://t.me/igreetyou}{\underline{igreetu}}}
 
-
 %%% Skills 
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
 
 \begin{itemize}
-  \item \textbf{Languages: C++, Python, C, Assembly, PascalABC}
-  \item \textbf{Technologies: Unreal Engine 4, Bash, Git, Gdb, LaTeX}
-  \item \textbf{Algorithms, Data Structures}
-  \item \textbf{Competitive Programming}
+  \item \textbf{Languages: C++, Python, C, Assembly}
+  \item \textbf{Technologies: Bash, Git, Gdb, LaTeX}
+  \item \textbf{Algorithms, Data Structures, Competitive Programming}
 \end{itemize}
 
 %%% Projects
@@ -190,10 +184,17 @@ urlcolor=blue]{hyperref}
 \begin{itemize}
   \item \textbf{\href{https://github.com/DenisOstashov/lisp-interpreter}{\underline{Lisp Interpreter}}} - interpreter for a lisp-like programming language, namely a subset of scheme
   
- \item \textbf{\href{https://github.com/DenisOstashov/SmartPtrs}{\underline{Smart Ptrs}}} - implementation of std::unique\_ptr and std::shared\_ptr
- \item \textbf{\href{https://github.com/DenisOstashov/Concurrent-Hash-Map}{\underline{Concurrent Hash Map}}} - implementation of concurrent hash map
-  \item \textbf{\href{https://github.com/DenisOstashov/MPSC-stack}{\underline{MPSC stack}}} - implementation of lock free stack
-  \item \textbf{\href{https://github.com/DenisOstashov/Channels}{\underline{Channels}}} - buffered and unbuffered channels
+ \item \textbf{\href{https://github.com/DenisOstashov/SmartPtrs}{\underline{Smart Pointers}}} - implementation of std::unique\_ptr, std::weak\_ptr and std::shared\_ptr
+ \item \textbf{\href{https://www.kaggle.com/c/activity-analysis/leaderboard}{\underline{Motion type recognition}}} - recognition of the type of human movement using data collected by the phone(top 10 among my faculty)
+  
+\end{itemize}
+
+\NewPart{Courses}{}(Led by Danila Kutenin)
+
+\begin{itemize}
+  \item \textbf{\href{https://github.com/DenisOstashov/cpp-advanced-hse}{\underline{Advanced C++}}} - course consists of learning memory models, lambdas, metaprogramming, errors, patterns, threading, condition variables
+  
+ \item \textbf{Modern Software Engineering Practices} - course consists of learning Shell scripting, Git, Gdb, Build Systems(cmake, make and etc), CI/CD, Docker, Markdown, LaTeX and other
   
 \end{itemize}
 
@@ -204,10 +205,7 @@ urlcolor=blue]{hyperref}
 
 \begin{itemize}
 
-\item \textbf{HSE University: \href{https://www.hse.ru/ba/ami/}{\underline{Applied Mathematics \& Information Science}}} 
+\item \textbf{Higher School of Economics, Moscow, Russia:\\Applied Mathematics and Information Science, 2 course\\GPA 9.52 out of 10(5/278 in	current rating)} 
 \end{itemize}
-
-
-
 
 \end{document}
